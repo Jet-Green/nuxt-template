@@ -19,7 +19,6 @@ export default defineNuxtConfig({
   },
 
   modules: [
-    '@nuxt/content',
     (_options, nuxt) => {
       nuxt.hooks.hook("vite:extendConfig", (config) => {
         // @ts-expect-error
@@ -37,10 +36,6 @@ export default defineNuxtConfig({
     "@pinia/nuxt",
     '@vite-pwa/nuxt',
   ],
-  // nuxt content
-  content: {
-    // ... options
-  },
   pwa: {
     workbox: {
       globPatterns: ['**/*.{js,css,html,png,jpg,svg}'],  // Removed **/_payload.json
@@ -53,9 +48,9 @@ export default defineNuxtConfig({
     registerType: 'autoUpdate',
     includeAssets: ['favicon.svg', 'favicon.ico', 'robots.txt', 'images/apple-touch-icon.png'],
     manifest: {
-      name: 'Глазов-есть!',
-      short_name: 'Глазов-есть!',
-      description: 'Кафе, рестораны, доставки, qr-меню, бронирование столиков',
+      name: 'Название',
+      short_name: 'Название',
+      description: 'Описание',
       theme_color: '#ffffff',
       background_color: "#ffffff",
       display: "standalone",
@@ -95,7 +90,7 @@ export default defineNuxtConfig({
   },
 
   devServer: {
-    port: 3041,
+    port: 3055,
   },
   
 

@@ -1,1 +1,0 @@
-<template> Все заказы</template>
